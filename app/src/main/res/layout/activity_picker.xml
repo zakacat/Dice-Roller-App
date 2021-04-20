@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dgl114.improveddiceroller.PickerActivity"
+    android:background="@color/burgundy">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_the_color_of_your_dice"
+            android:textSize="20sp"
+            android:textColor="@color/off_white"
+            android:layout_marginStart="8dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/redRadio"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:text="@string/red"
+                android:textColor="@color/colorDice"
+                android:textSize="18sp"
+                android:layout_marginStart="16dp"
+                android:checked="true"
+                android:onClick="onColorRadioClick"/>
+
+            <RadioButton
+                android:id="@+id/orangeRadio"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:text="@string/orange"
+                android:textColor="@color/orangeDice"
+                android:textSize="18sp"
+                android:onClick="onColorRadioClick"/>
+
+            <RadioButton
+                android:id="@+id/yellowRadio"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:text="@string/yellow"
+                android:textColor="@color/yellowDice"
+                android:textSize="18sp"
+                android:onClick="onColorRadioClick"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_the_roll_duration"
+            android:textColor="@color/off_white"
+            android:textSize="20sp"
+            android:layout_marginStart="8dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/roll1000"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:text="@string/short_text"
+                android:textColor="@color/off_white"
+                android:textSize="18sp"
+                android:layout_marginStart="16dp"
+                android:onClick="onRollRadioClick"/>
+
+            <RadioButton
+                android:id="@+id/roll2000"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:text="@string/medium_text"
+                android:textColor="@color/off_white"
+                android:textSize="18sp"
+                android:checked="true"
+                android:onClick="onRollRadioClick"/>
+
+            <RadioButton
+                android:id="@+id/roll3000"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:text="@string/long_text"
+                android:textColor="@color/off_white"
+                android:textSize="18sp"
+                android:onClick="onRollRadioClick"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_the_value_of_your_dice"
+            android:textColor="@color/off_white"
+            android:textSize="20sp"
+            android:layout_marginStart="8dp"/>
+
+        <GridLayout
+            android:id="@+id/dice_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="2"
+            android:useDefaultMargins="true">
+
+            <ImageView
+                android:id="@+id/die4"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@color/burgundy"
+                app:srcCompat="@drawable/dice_4"
+                app:tint="@color/colorDice"
+                android:onClick="onDieValueClick"
+                android:layout_gravity="fill"
+                android:contentDescription="@string/_4" />
+
+            <ImageView
+                android:id="@+id/die6"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@color/black"
+                app:srcCompat="@drawable/dice_6"
+                app:tint="@color/colorDice"
+                android:onClick="onDieValueClick"
+                android:contentDescription="@string/_6" />
+
+            <ImageView
+                android:id="@+id/die8"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@color/burgundy"
+                app:srcCompat="@drawable/dice_8"
+                app:tint="@color/colorDice"
+                android:onClick="onDieValueClick"
+                android:contentDescription="@string/_8" />
+
+            <ImageView
+                android:id="@+id/die10"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@color/burgundy"
+                app:srcCompat="@drawable/dice_10"
+                app:tint="@color/colorDice"
+                android:onClick="onDieValueClick"
+                android:contentDescription="@string/_10" />
+
+            <ImageView
+                android:id="@+id/die12"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@color/burgundy"
+                app:srcCompat="@drawable/dice_12"
+                app:tint="@color/colorDice"
+                android:onClick="onDieValueClick"
+                android:contentDescription="@string/_12" />
+
+            <ImageView
+                android:id="@+id/die20"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@color/burgundy"
+                app:srcCompat="@drawable/dice_20"
+                app:tint="@color/colorDice"
+                android:onClick="onDieValueClick"
+                android:contentDescription="@string/_20" />
+        </GridLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_arrow_left"
+         app:layout_anchorGravity="bottom|right|end"
+         android:layout_gravity="bottom|end"
+         android:layout_marginEnd="18dp"
+         android:layout_marginBottom="18dp"
+         android:onClick="onReturnClick"
+        android:contentDescription="@string/return_text" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>

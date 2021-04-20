@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- I borrowed this pallette from a wonderful person at https://colorswall.com/palette/13096/ -->
+<resources>
+    <color name="dark_blue">#264c5e </color>
+    <color name="grey_purple">#464148  </color>
+    <color name="olive_green">#555752  </color>
+    <color name="faded_red">#a34c50 </color>
+    <color name="burgundy">#4a2932 </color>
+    <color name="black">#FF000000</color>
+    <color name="off_white">#cec2ae</color>
+    <color name="colorDice">#e94445 </color>
+    <color name="orangeDice">#bc2d15</color>
+    <color name="yellowDice">#cf901b</color>
+</resources>
